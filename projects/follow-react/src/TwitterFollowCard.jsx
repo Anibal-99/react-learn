@@ -5,15 +5,14 @@ export function TwitterFollowCard({userName, nameUser}) {
 
 
 	const text = isFollowing ? 'Siguiendo' : 'Seguir'
-	const buttonClassName = isFollowing ? 
-	'tw-followCard-button is-following' : 
+	const buttonClassName = isFollowing ?
+	'tw-followCard-button is-following' :
 	'tw-followCard-button'
-
 
 	const handleClick = ()=>{
 		setIsFollowing(!isFollowing)
 	}
-	
+
 	const imageSrc = `https://unavatar.io/${userName}`
   return (
     <article className='tw-followCard'>
@@ -24,7 +23,7 @@ export function TwitterFollowCard({userName, nameUser}) {
           <span className='tw-followCard-span'>@{userName}</span>
         </div>
       </header>
-			
+
       <aside>
         <button className={buttonClassName} onClick={handleClick}>
 					{text}
